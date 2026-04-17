@@ -1,15 +1,13 @@
-streamlit>=1.30.0
-opencv-contrib-python-headless>=4.8.0
-numpy>=1.24.0,<2.0.0
-Pillow>=10.0.0
-scipy>=1.11.0
-scikit-image>=0.21.0
-pandas>=2.0.0
-arabic-reshaper>=3.0.0
-python-bidi>=0.4.2
+streamlit
+opencv-contrib-python-headless
+numpy<2.0
+Pillow
+scikit-image
+pandas
+arabic-reshaper
+python-bidi
 
-# EasyOCR is optional — it pulls ~800MB (PyTorch) which exceeds
-# Streamlit Cloud's free-tier install budget. The app degrades
-# gracefully to basic text-region detection without it.
-# If running locally, uncomment to enable Arabic/English OCR:
-# easyocr>=1.7.0
+# EasyOCR is intentionally omitted — it pulls PyTorch (~800MB) which
+# exceeds Streamlit Cloud's free-tier install budget. The app handles
+# the missing import gracefully (see top of image_analyzer_app_1.py).
+# For local runs with full OCR, add:  easyocr

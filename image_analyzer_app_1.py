@@ -1,11 +1,8 @@
 import streamlit as st
 import cv2
 import numpy as np
-from PIL import Image, ImageStat, ImageFilter, ImageDraw, ImageFont
-from collections import Counter
-import io
-from scipy import stats
-from skimage import feature, filters, measure
+from PIL import Image
+from skimage import filters
 import pandas as pd
 import re
 try:
