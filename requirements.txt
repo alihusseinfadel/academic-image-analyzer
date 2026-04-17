@@ -5,8 +5,4 @@ Pillow
 pandas
 arabic-reshaper
 python-bidi
-
-# EasyOCR and scikit-image are intentionally omitted —
-# they caused install failures on Streamlit Cloud's free tier.
-# The app gracefully skips OCR when easyocr is missing,
-# and complexity is now computed via pure-numpy Shannon entropy.
+easyocr
