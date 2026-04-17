@@ -1,0 +1,40 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+
+# --- IDE ---
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# --- OS ---
+Thumbs.db
+.DS_Store
+desktop.ini
+
+# --- Project-specific ---
+# Local fonts downloaded at runtime
+fonts/
+
+# Sample media (not part of the code)
+*.mp4
+Video_*.mp4
+WhatsApp*.jpeg
+WhatsApp*.jpg
+
+# Streamlit cache
+.streamlit/secrets.toml
+
+# Temporary Word lock files
+~$*.docx
+
+# Empty placeholder docs
+New Microsoft Word Document.docx
