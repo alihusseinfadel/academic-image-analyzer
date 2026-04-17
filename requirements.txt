@@ -5,6 +5,11 @@ Pillow>=10.0.0
 scipy>=1.11.0
 scikit-image>=0.21.0
 pandas>=2.0.0
-easyocr>=1.7.0
 arabic-reshaper>=3.0.0
 python-bidi>=0.4.2
+
+# EasyOCR is optional — it pulls ~800MB (PyTorch) which exceeds
+# Streamlit Cloud's free-tier install budget. The app degrades
+# gracefully to basic text-region detection without it.
+# If running locally, uncomment to enable Arabic/English OCR:
+# easyocr>=1.7.0
