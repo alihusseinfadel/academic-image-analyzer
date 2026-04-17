@@ -1214,7 +1214,7 @@ def main():
                 بحث طالبة الدكتوراه
             </div>
             <div style="font-size: 1.2rem; font-weight: 700; margin-top: 0.3rem;">
-                عبير قاسم حلف
+                عبير قاسم خلف
             </div>
             <div style="font-size: 0.9rem; opacity: 0.9; margin-top: 0.4rem;">
                 الجامعة المستنصرية &nbsp;•&nbsp; كلية التربية الأساسية
@@ -1236,7 +1236,7 @@ def main():
                 بحث طالبة الدكتوراه
             </div>
             <div style="font-size: 1.25rem; font-weight: 700; line-height: 1.4;">
-                عبير قاسم حلف
+                عبير قاسم خلف
             </div>
             <div style="height: 1px; background: rgba(255,255,255,0.3);
                         margin: 0.8rem 0;"></div>
@@ -1855,7 +1855,7 @@ def main():
         {chr(10).join('- ' + r for r in recommendations) if recommendations else '- لا توجد توصيات، الصورة بجودة ممتازة'}
         
         ================================================
-        بحث طالبة الدكتوراه: عبير قاسم حلف
+        بحث طالبة الدكتوراه: عبير قاسم خلف
         الجامعة المستنصرية - كلية التربية الأساسية
         ================================================
         تم إنشاء هذا التقرير بواسطة: محلل الصور الأكاديمي
@@ -1901,7 +1901,7 @@ def main():
                     بحث طالبة الدكتوراه
                 </div>
                 <div style="font-size: 1.4rem; font-weight: 700;">
-                    عبير قاسم حلف
+                    عبير قاسم خلف
                 </div>
                 <div style="font-size: 1rem; margin-top: 0.6rem; opacity: 0.95;">
                     الجامعة المستنصرية &nbsp;•&nbsp; كلية التربية الأساسية
