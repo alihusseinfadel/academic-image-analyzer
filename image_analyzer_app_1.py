@@ -2,7 +2,6 @@ import streamlit as st
 import cv2
 import numpy as np
 from PIL import Image
-from skimage import filters
 import pandas as pd
 import re
 try:
@@ -331,11 +330,18 @@ class ImageAnalyzer:
         return score
     
     def _calculate_complexity(self):
-        """حساب التعقيد البصري"""
-        # استخدام entropy كمقياس للتعقيد
-        entropy = filters.rank.entropy(self.gray_image, np.ones((9, 9)))
-        complexity_score = np.mean(entropy) * 20
-        return min(100, complexity_score)
+        """حساب التعقيد البصري عبر Shannon entropy (numpy فقط)"""
+        # Shannon entropy of the grayscale histogram — a global measure
+        # of how much information the image carries. Max entropy for an
+        # 8-bit image is 8 bits (fully random); we normalize to 0-100.
+        hist, _ = np.histogram(self.gray_image, bins=256, range=(0, 256))
+        hist = hist[hist > 0].astype(np.float64)
+        if hist.size == 0:
+            return 0.0
+        prob = hist / hist.sum()
+        entropy = -np.sum(prob * np.log2(prob))
+        complexity_score = entropy / 8.0 * 100.0  # 8 bits = max entropy
+        return float(min(100.0, complexity_score))
     
     def _categorize_complexity(self, complexity):
         """تصنيف التعقيد"""

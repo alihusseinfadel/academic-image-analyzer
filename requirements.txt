@@ -2,12 +2,11 @@ streamlit
 opencv-contrib-python-headless
 numpy<2.0
 Pillow
-scikit-image
 pandas
 arabic-reshaper
 python-bidi
 
-# EasyOCR is intentionally omitted — it pulls PyTorch (~800MB) which
-# exceeds Streamlit Cloud's free-tier install budget. The app handles
-# the missing import gracefully (see top of image_analyzer_app_1.py).
-# For local runs with full OCR, add:  easyocr
+# EasyOCR and scikit-image are intentionally omitted —
+# they caused install failures on Streamlit Cloud's free tier.
+# The app gracefully skips OCR when easyocr is missing,
+# and complexity is now computed via pure-numpy Shannon entropy.
